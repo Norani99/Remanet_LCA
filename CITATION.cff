@@ -6,4 +6,7 @@ authors:
     given-names: "Mohamed"
     affiliation: "Luleå University of Technology"
 repository-code: "https://github.com/Norani99/Remanet_LCA"
+url: "https://github.com/Norani99/Remanet_LCA/releases/tag/v1.0.0"
+version: "1.0.0"
+date-released: "2026-11-11"
 license: MIT
