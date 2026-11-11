@@ -1,5 +1,7 @@
 # RemaNet LCA — Federated LLM-Assisted Life Cycle Assessment
 
+[![tests](https://github.com/Norani99/Remanet_LCA/actions/workflows/tests.yml/badge.svg)](https://github.com/Norani99/Remanet_LCA/actions/workflows/tests.yml)
+
 Reference implementation of the matching pipeline described in the RemaNet paper
 ("LLMs as a standardisation layer for multi-stakeholder LCA in remanufacturing
 networks", submitted to CIRP LCE 2027). It lets remanufacturing-network actors

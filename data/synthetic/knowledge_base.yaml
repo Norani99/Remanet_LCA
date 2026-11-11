@@ -32,3 +32,27 @@ entries:
       - "rewind stator windings"
     sector_code: EXIO_C27_1
     source: exiobase3
+
+  - phrases:
+      - "disassemble and inspect a used electric motor rotor"
+      - "disassemble electric motor for inspection"
+    sector_code: EXIO_C27_1
+    source: exiobase3
+
+  - phrases:
+      - "degrease and clean metal parts before reassembly"
+      - "solvent clean components"
+    sector_code: BAFU_METAL_CLEAN
+    source: bafu2026
+
+  - phrases:
+      - "transport reconditioned parts back to customer site"
+      - "road freight delivery of refurbished parts"
+    sector_code: BAFU_TRANSPORT
+    source: bafu2026
+
+  - phrases:
+      - "machine new replacement part from steel stock"
+      - "cnc machine a replacement component"
+    sector_code: EXIO_C25_1
+    source: exiobase3
