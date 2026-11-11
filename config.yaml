@@ -1,0 +1,20 @@
+# RemaNet LCA pipeline configuration
+
+matching:
+  semantic_similarity_threshold: 0.75   # rung 3: below this, fall through to LLM
+  llm_confidence_threshold: 0.70        # rung 4: below this, escalate to NEEDS_INPUT
+
+llm:
+  enabled: true
+  backend: "none"       # "ollama" | "openai_compatible" | "none"
+  model: "qwen2.5:7b"
+  base_url: "http://localhost:11434"
+  api_key_env: "LLM_API_KEY"
+
+background_db:
+  sources:
+    - exiobase3   # synthetic stand-in in data/background_db/exiobase3_synthetic.csv
+    - bafu2026    # synthetic stand-in in data/background_db/bafu2026_synthetic.csv
+
+embeddings:
+  model: "all-MiniLM-L6-v2"

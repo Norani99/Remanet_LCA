@@ -1,0 +1,8 @@
+actor_id,product,process_description
+SME_A,hss_twist_drill,clean and regrind a worn HSS twist drill
+SME_A,hss_twist_drill,apply PVD coating after regrinding the drill tip
+SME_B,electric_motor,disassemble and inspect a used electric motor rotor
+SME_B,electric_motor,rewind copper windings on a refurbished stator
+SME_C,carbide_insert,recondition a worn carbide cutting insert by regrinding
+SME_C,carbide_insert,recycle scrap tungsten carbide from insert production
+SME_D,press_brake_mold,unclear legacy process note needing expert review

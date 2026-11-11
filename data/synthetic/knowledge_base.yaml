@@ -1,0 +1,34 @@
+# Curated domain knowledge base (rung 2 of the matching ladder).
+# Maps known remanufacturing process phrases to a background sector code.
+# This is a small illustrative set, not the full KB used in the paper.
+
+entries:
+  - phrases:
+      - "regrind a worn hss twist drill"
+      - "clean and regrind a worn hss twist drill"
+      - "resharpen hss twist drill"
+    sector_code: BAFU_METAL_GRIND
+    source: bafu2026
+
+  - phrases:
+      - "apply pvd coating"
+      - "pvd coating of cutting tools"
+    sector_code: BAFU_METAL_COAT
+    source: bafu2026
+
+  - phrases:
+      - "recondition a worn carbide cutting insert by regrinding"
+      - "regrind carbide insert"
+    sector_code: BAFU_METAL_GRIND
+    source: bafu2026
+
+  - phrases:
+      - "recycle scrap tungsten carbide"
+    sector_code: BAFU_METAL_RECY
+    source: bafu2026
+
+  - phrases:
+      - "rewind copper windings on a refurbished stator"
+      - "rewind stator windings"
+    sector_code: EXIO_C27_1
+    source: exiobase3

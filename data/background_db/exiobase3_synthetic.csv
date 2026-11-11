@@ -1,0 +1,8 @@
+sector_code,sector_name,unit,gwp_kg_co2e_per_unit
+EXIO_C24_1,Basic iron and steel,kg,1.85
+EXIO_C24_2,Basic precious and other non-ferrous metals,kg,6.90
+EXIO_C25_1,Fabricated metal products (machining),kg,2.40
+EXIO_C28_1,Machinery and equipment n.e.c.,kg,2.95
+EXIO_C27_1,Electrical equipment,kg,4.10
+EXIO_W_1,Waste collection and treatment,kg,0.35
+EXIO_E_1,Electricity grid mix,kWh,0.42

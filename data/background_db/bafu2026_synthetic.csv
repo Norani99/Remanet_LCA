@@ -1,0 +1,7 @@
+sector_code,sector_name,unit,gwp_kg_co2e_per_unit
+BAFU_METAL_GRIND,Grinding and resharpening of tool steel,kg,0.62
+BAFU_METAL_CLEAN,Industrial degreasing and cleaning (solvent-based),kg,0.18
+BAFU_METAL_COAT,PVD/CVD coating of cutting tools,kg,1.05
+BAFU_METAL_RECY,Recycling of tungsten carbide scrap,kg,0.95
+BAFU_ELEC_CH,Electricity mix Switzerland,kWh,0.09
+BAFU_TRANSPORT,Road freight transport (EU average),tkm,0.11

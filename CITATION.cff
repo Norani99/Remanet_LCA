@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "RemaNet LCA: Federated LLM-Assisted Life Cycle Assessment for Remanufacturing Networks"
+authors:
+  - family-names: "Elnourani"
+    given-names: "Mohamed"
+    affiliation: "Luleå University of Technology"
+repository-code: "https://github.com/Norani99/Remanet_LCA"
+license: MIT
