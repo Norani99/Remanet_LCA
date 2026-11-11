@@ -117,9 +117,32 @@ questions tied to the paper itself.
 
 ## Citation
 
-See `CITATION.cff`. If you use this pipeline, please cite the paper once
-published; until then, cite the repository directly.
+Machine-readable citation metadata is in `CITATION.cff`. If you use this
+pipeline, please cite the paper once published; until then, cite the
+software directly:
+
+**APA**
+
+> Elnourani, M. (2026). *RemaNet LCA: Federated LLM-assisted life cycle
+> assessment for remanufacturing networks* (Version 1.0.0) [Computer
+> software]. https://github.com/Norani99/Remanet_LCA
+
+**BibTeX**
+
+```bibtex
+@software{elnourani2026remanetlca,
+  author  = {Elnourani, Mohamed},
+  title   = {RemaNet LCA: Federated LLM-Assisted Life Cycle Assessment
+             for Remanufacturing Networks},
+  year    = {2026},
+  version = {1.0.0},
+  url     = {https://github.com/Norani99/Remanet_LCA},
+  note    = {Luleå University of Technology}
+}
+```
 
 ## License
 
-MIT — see `LICENSE`.
+This repository's own code and synthetic example data are MIT licensed —
+see `LICENSE`. Third-party dependencies keep their own licenses — see
+`THIRD_PARTY_NOTICES.md`.
