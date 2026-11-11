@@ -111,9 +111,21 @@ def run_batch(input_csv: Path, output_csv: Path) -> None:
         [asdict(pipeline.match(desc)) for desc in df["process_description"]]
     ).drop(columns=["process_description"])
     out = pd.concat([df.reset_index(drop=True), results], axis=1)
+
+    # If the input gives a quantity per step, scale the per-unit GWP figure
+    # into a total for that step so steps can be summed into a case total.
+    if "quantity" in out.columns:
+        out["gwp_kg_co2e_total"] = out["gwp_kg_co2e_per_unit"] * out["quantity"]
+
     out.to_csv(output_csv, index=False)
     n_resolved = (out["rung"] != "needs_input").sum()
     print(f"Resolved {n_resolved}/{len(out)} process steps. Wrote {output_csv}")
+
+    if "case" in out.columns and "gwp_kg_co2e_total" in out.columns:
+        print("\nTotal GWP by case (resolved steps only, kg CO2-eq):")
+        totals = out.groupby("case")["gwp_kg_co2e_total"].sum(min_count=1)
+        for case, total in totals.items():
+            print(f"  {case}: {total:.3f}")
 
 
 def main():

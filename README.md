@@ -68,6 +68,20 @@ search only.
 python -m remanet_lca.pipeline --input data/synthetic/example_processes.csv --output results.csv
 ```
 
+The bundled example file covers the two cases evaluated in the paper —
+**HSS twist-drill regrinding** and **electric motor refurbishment** — each
+with synthetic process steps that resolve against both background
+databases (EXIOBASE 3 and BAFU:2026). With a `quantity` column present, the
+run also prints a total GWP per case:
+
+```
+Resolved 8/8 process steps. Wrote results.csv
+
+Total GWP by case (resolved steps only, kg CO2-eq):
+  electric_motor_refurbishment: 8.659
+  hss_drill_regrinding: 2.396
+```
+
 Or from Python:
 
 ```python

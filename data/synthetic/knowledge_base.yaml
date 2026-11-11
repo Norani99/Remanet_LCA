@@ -13,6 +13,7 @@ entries:
   - phrases:
       - "apply pvd coating"
       - "pvd coating of cutting tools"
+      - "apply pvd coating after regrinding the drill tip"
     sector_code: BAFU_METAL_COAT
     source: bafu2026
 
@@ -48,11 +49,14 @@ entries:
   - phrases:
       - "transport reconditioned parts back to customer site"
       - "road freight delivery of refurbished parts"
+      - "transport reconditioned drills back to customer site"
+      - "transport reconditioned motors back to customer site"
     sector_code: BAFU_TRANSPORT
     source: bafu2026
 
   - phrases:
       - "machine new replacement part from steel stock"
       - "cnc machine a replacement component"
+      - "machine a replacement drill blank from tool steel stock"
     sector_code: EXIO_C25_1
     source: exiobase3
