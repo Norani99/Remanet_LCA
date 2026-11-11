@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import warnings
 from dataclasses import dataclass, asdict
 from pathlib import Path
 
@@ -73,8 +74,15 @@ class MatchingPipeline:
         # Rung 4: LLM fallback
         if self.config["llm"]["enabled"]:
             candidates = [s.sector_code for s in self.db.all_sectors()]
-            llm_result = self.llm.match(description, candidates)
-            if llm_result.sector_code and llm_result.confidence >= self.llm.confidence_threshold:
+            try:
+                llm_result = self.llm.match(description, candidates)
+            except Exception as exc:
+                # A real backend (Ollama down, bad API key, network error, timeout)
+                # must not crash the batch run. Treat it the same as "no confident
+                # match" and escalate, instead of guessing or raising.
+                warnings.warn(f"LLM backend call failed for a process step, escalating to NEEDS_INPUT: {exc}")
+                llm_result = None
+            if llm_result and llm_result.sector_code and llm_result.confidence >= self.llm.confidence_threshold:
                 self.cache.put(description, llm_result.sector_code)
                 return self._finalize(
                     description, llm_result.sector_code, "llm", confidence=llm_result.confidence
